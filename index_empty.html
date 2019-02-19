@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; - A-frame</title>
+    <meta name="description" content="360&deg; - A-Frame">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <!-- ASSIJETS  -->
+            <img id="boxTexture" src="mYmmbrp.jpg">
+        </a-assets>
+
+        <!-- Entities go here -->
+
+        <a-sphere color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-sphere>
+        <a-box src="#boxTexture" position="4 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-plane rotation="-90 0 0" position="0 0.1 0" width="30" height="30"></a-plane>
+        <!--<a-light type="ambient" color="#445451"></a-light>-->
+        <!--<a-light type="point" intensity="2" position="2 4 4"></a-light>-->
+        <a-entity environment="preset: forest; dressingAmount: 5000"></a-entity>
+
+        <!-- Camera and Cursor -->
+
+    </a-scene>
+</body>
+
+</html>
